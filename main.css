@@ -36,10 +36,12 @@ img {
 	height: 100%;
 	opacity: 0;
 	transition: 0.5s;
+	will-change: opacity;
 }
 
 .scroll-graphic {
 	position: sticky;
+	overflow-x: hidden;
 	top: 0;
 	height: 100vh;
 }
@@ -57,7 +59,20 @@ img {
 	box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
 }
 
+.bird {
+	position: absolute;
+	left: 0;
+	bottom: 70%;
+	width: 100px;
+	transform: translateX(-100%);
+	transition: 1.5s 0.2s linear;
+}
 
 .visible {
 	opacity: 1;
+}
+
+[data-index="5"] .bird {
+	left: 30%;
+	bottom: 30%;
 }
